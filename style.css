@@ -21,7 +21,7 @@
   z-index: 1002;
   top: 50%;
   right: 20px;
-  margin-top: -14px;
+  margin-top: -13px;
   cursor: pointer;
 }
 
@@ -36,6 +36,7 @@
   font-weight: 100;
   font-size: 16px;
   color: rgb(119, 119, 119);
+  letter-spacing: 2px;
 }
 
 #header .mobile-nav-toggle .top-bar,
@@ -47,7 +48,7 @@
 
 @media screen and (min-width: 640px) {
   #header .mobile-nav-toggle {
-    margin-top: -40px;
+    margin-top: -39px;
   }
 }
 
