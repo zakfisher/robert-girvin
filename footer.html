@@ -1,0 +1,70 @@
+<script>
+(function(){
+
+  // NAV
+  const navToggles = document.querySelectorAll('.mobile-nav-toggle');
+  Array.prototype.slice.call(navToggles, 0).map(function(el) {
+    el.addEventListener('click', function() {
+      document.body.className += ' force-mobile-nav mobile-nav-open'
+    });
+  });
+
+  // SLIDESHOWS
+  const slideshowTitles = document.querySelectorAll('.meta-title');
+  const whiteTitles = ['Mythos', 'Thales', 'Nike'];
+  slideshowTitles.forEach(function(el) {
+    const title = el.innerText.split(' ')[0];
+    el.innerText = title;
+    if (whiteTitles.indexOf(title) > -1) el.style.color = 'white';
+  });
+
+  // SEARCH HEADER
+  if (document.querySelectorAll('.sqs-search-page').length) {
+    const siteWrapper = document.getElementById('siteWrapper');
+    const page = document.getElementById('page');
+    const searchHeader = document.createElement('div');
+    searchHeader.setAttribute('class', 'banner-thumbnail-wrapper has-description');
+    searchHeader.setAttribute('data-content-field', 'main-image');
+    searchHeader.setAttribute('data-edit-main-image', 'Banner');
+    searchHeader.setAttribute('data-annotation-alignment', 'bottom left');
+    searchHeader.innerHTML = '<div class="color-overlay"></div><div class="desc-wrapper"><p><strong data-shrink-original-size="33">Search</strong></p></div>';
+    siteWrapper.insertBefore(searchHeader, page);
+  }
+
+  // FOOTER
+
+  return; // remove this line if you want social icons
+
+  document.querySelector('#footerBlocks').outerHTML = '\
+    <div id="footer-content"> \
+      <div class="social-icons"> \
+        <ul> \
+          <li> \
+            <a href="mailto: hey@robertgirvin.com?subject=hey" target="_blank"> \
+              <img src="https://firebasestorage.googleapis.com/v0/b/robert-girvin.appspot.com/o/social%2Femail.svg?alt=media&token=3e9c308c-aaa1-45a6-9367-d6cc7426f2b9" alt=""> \
+            </a> \
+          </li> \
+          <li> \
+            <a href="https://twitter.com/robertgirvin" target="_blank"> \
+              <img src="https://firebasestorage.googleapis.com/v0/b/robert-girvin.appspot.com/o/svg%2Ftwitter.svg?alt=media&token=f52c9ecc-6f14-482c-8cdd-bf0f7c4dc811" alt=""> \
+            </a> \
+          </li> \
+          <li> \
+            <a href="https://www.linkedin.com/in/robertgirvin/" target="_blank"> \
+              <img src="https://firebasestorage.googleapis.com/v0/b/robert-girvin.appspot.com/o/svg%2Flinkedin.svg?alt=media&token=63e7eebc-8a7f-477b-8cb3-b04faabe265a" alt=""> \
+            </a> \
+          </li> \
+          <li> \
+            <a href="https://soundcloud.com/robertgirvin" target="_blank"> \
+              <img src="https://firebasestorage.googleapis.com/v0/b/robert-girvin.appspot.com/o/social%2Fsoundcloud.svg?alt=media&token=47e1ec2a-27bc-46ea-8c11-adf5be61055a" alt=""> \
+            </a> \
+          </li> \
+        </ul> \
+      </div> \
+      <div class="rights"> \
+        <p><a href="/">robertgirvin.com</a><span>all rights reserved.</span></p> \
+      </div> \
+    </div> \
+  ';
+})()
+</script>
