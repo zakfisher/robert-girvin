@@ -23,12 +23,31 @@
     const siteWrapper = document.getElementById('siteWrapper');
     const page = document.getElementById('page');
     const searchHeader = document.createElement('div');
+    searchHeader.setAttribute('id', 'search-header');
     searchHeader.setAttribute('class', 'banner-thumbnail-wrapper has-description');
     searchHeader.setAttribute('data-content-field', 'main-image');
     searchHeader.setAttribute('data-edit-main-image', 'Banner');
     searchHeader.setAttribute('data-annotation-alignment', 'bottom left');
     searchHeader.innerHTML = '<div class="color-overlay"></div><div class="desc-wrapper"><p><strong data-shrink-original-size="33">Search</strong></p></div>';
     siteWrapper.insertBefore(searchHeader, page);
+
+    const searchStyle = document.createElement('style');
+    searchStyle.innerHTML = '\
+      #search-header {\
+        min-height: auto;\
+        margin-top: -10px;\
+      }\
+      #search-header p {\
+        position: relative;\
+        top: -20px;\
+      }\
+      @media screen and (min-width: 640px) {\
+        #search-header {\
+          margin-top: -60px;\
+        }\
+      }\
+    ';
+    siteWrapper.insertBefore(searchStyle, searchHeader);
   }
 
   // FOOTER

@@ -5,10 +5,18 @@
   overflow: hidden;
 }
 
+.sqs-layout .spacer-block {
+  display: block !important;
+}
+
 /* NAV STYLES */
 
 #sidecarNav nav a {
   font-size: 24px;
+}
+
+#sidecarNav nav {
+  padding: 12px 36px 72px;
 }
 
 #headerNav,
@@ -37,7 +45,7 @@
   display: flex;
   align-items: center;
   font-weight: 100;
-  font-size: 16px;
+  font-size: 24px;
   color: rgb(119, 119, 119);
   letter-spacing: 2px;
 }
@@ -182,10 +190,6 @@
   max-width: 1060px;
 }
 
-.center-navigation--info #siteInfo {
-  text-align: left;
-}
-
 .footer-inner {
   padding: 64px 0;
   max-width: 1030px;
@@ -194,8 +198,17 @@
 
 .center-navigation--info #siteInfo {
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 32px;
+}
+
+#siteInfo * {
+  display: inline-block !important;
+  margin-right: 10px;
+}
+
+.site-email:before {
+  content: '' !important;
 }
 
 @media screen and (min-width: 640px) {
@@ -209,7 +222,7 @@
 }
 
 .back-to-top {
-  display: none;
+  display: none !important;
 }
 
 /* APP DOWNLOAD BUTTONS */
@@ -233,7 +246,7 @@ body:not(.has-banner-image).transparent-header #content {
 
 body:not(.has-banner-image).transparent-header #header,
 .collection-type-gallery.has-banner-image.transparent-header #header {
-  background: white;
+  background: #fefefe;
 }
 
 .sqs-search-page-more.sqs-system-button-style-mixin.sqs-editable-button {
