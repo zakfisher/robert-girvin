@@ -50,6 +50,17 @@
     siteWrapper.insertBefore(searchStyle, searchHeader);
   }
 
+  // WORK GALLERY
+  const workGalleryCaptions = document.querySelectorAll('.sqs-gallery-block-grid.sqs-gallery-block-meta-only-title .margin-wrapper .image-slide-title')
+  if (workGalleryCaptions.length) {
+    workGalleryCaptions.forEach(function(el) {
+      el.innerText = el.innerText.split(' ')[0]
+      setTimeout(function() {
+        el.style.opacity = 1
+      }, 1000)
+    })
+  }
+
   // FOOTER
 
   return; // remove this line if you want social icons

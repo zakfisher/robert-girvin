@@ -44,10 +44,10 @@
   top: 0;
   display: flex;
   align-items: center;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 24px;
-  color: rgb(119, 119, 119);
-  letter-spacing: 2px;
+  color: #31AEED;
+  letter-spacing: 1px;
 }
 
 #header .mobile-nav-toggle .top-bar,
@@ -129,6 +129,31 @@
 
 .sqs-gallery-block-slideshow .meta .meta-title+.meta-description {
   display: none;
+}
+
+/* WORK GALLERY */
+.sqs-gallery-block-grid.sqs-gallery-block-meta-only-title .margin-wrapper .image-slide-title {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  text-align: left;
+  font-size: 30px;
+  font-weight: 500;
+  color: #31AEED;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+@media screen and (min-width: 640px) {
+  .sqs-gallery-block-grid.sqs-gallery-block-meta-only-title .margin-wrapper .image-slide-title {
+    font-size: 50px;
+  }
 }
 
 /* FOOTER STYLES */
